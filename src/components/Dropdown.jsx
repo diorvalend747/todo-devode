@@ -29,6 +29,7 @@ const CustomDropdown = ({
     <OutsideClickHandler onOutsideClick={() => setIsOpen(false)}>
       <div id="container" className="relative" data-cy="dropdown-priority">
         <button
+          data-cy="modal-add-priority-dropdown"
           onClick={() => setIsOpen(!isOpen)}
           className="bg-white py-2 px-4 border border-gray-300 rounded-md flex items-center gap-4 w-[200px] focus:border-[#A1DDFC] focus:ring-[#A1DDFC]"
         >
@@ -59,7 +60,10 @@ const CustomDropdown = ({
           </div>
         </button>
         {isOpen && (
-          <div className="absolute z-10 mt-2 py-2 w-[200px] bg-white rounded-md shadow-lg">
+          <div
+            data-cy="modal-add-priority-dropdown"
+            className="absolute z-10 mt-2 py-2 w-[200px] bg-white rounded-md shadow-lg"
+          >
             {options.map((option, index) => {
               return (
                 <button

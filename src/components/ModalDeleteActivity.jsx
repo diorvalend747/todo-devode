@@ -17,10 +17,13 @@ const ModalDeleteActivity = ({
     <div
       onClick={handleOnClose}
       id="container"
-      data-cy="modal-delete-activity"
+      data-cy="activity-item-delete-button"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
-      <div className="bg-white p-2 rounded-2xl px-9 py-9">
+      <div
+        data-cy="activity-item-delete-button"
+        className="bg-white p-2 rounded-2xl px-9 py-9"
+      >
         <div className="flex flex-col justify-center items-center gap-8">
           <img src={AlertIcon} alt="alert-icon" width={84} />
           <div className="max-w-[500px] text-center px-6">
@@ -31,8 +34,19 @@ const ModalDeleteActivity = ({
             </h2>
           </div>
           <div className="flex gap-6 mt-7">
-            <Button onClick={onClose} text="Batal" color="greyBg" />
-            <Button onClick={onConfirm} text="Hapus" color="labelVeryHigh" />
+            <button
+              onClick={onClose}
+              className={`bg-[#f4f4f4] text-[#4A4A4A] rounded-full py-3.5 px-8 text-lg font-semibold flex $w-[150px] text-center justify-center disabled:bg-[#D0EEFD]`}
+            >
+              Batal
+            </button>
+
+            <button
+              onClick={onConfirm}
+              className={`bg-[#ED4C5C] text-white rounded-full py-3.5 px-8 text-lg font-semibold flex $w-[150px] text-center justify-center disabled:bg-[#D0EEFD]`}
+            >
+              Hapus
+            </button>
           </div>
         </div>
       </div>

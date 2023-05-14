@@ -50,18 +50,21 @@ const Dashboard = () => {
           Activity
         </h1>
         <div data-cy="activity-add-button">
-          <Button
-            text="Tambah"
-            icon={PlusIcon}
-            color="primary"
+          <button
             onClick={_createActivity}
-          />
+            className={`bg-primary text-white rounded-full py-3.5 px-8 text-lg font-semibold flex $w-[150px] text-center justify-center disabled:bg-[#D0EEFD]`}
+          >
+            <div className="mr-2 mt-0.5">
+              <img src={PlusIcon} alt="button-icon" />
+            </div>
+            Tambah
+          </button>
         </div>
       </div>
       {isLoading ? (
         <div>Loading...</div>
       ) : activities.length > 0 ? (
-        <div className="grid grid-cols-4" data-cy="dashboard">
+        <div className="grid grid-cols-4" data-cy="activity-item">
           {activities.map((item, i) => {
             return (
               <CardActivity

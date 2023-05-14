@@ -4,7 +4,7 @@ const Button = (props) => {
       data-cy="button"
       onClick={props.onClick}
       disabled={props.disabled}
-      className={`bg-${props.color} text-${
+      className={`bg-[${props.color}] text-${
         props.color === "greyBg" ? "softBlack" : "white"
       } rounded-full py-3.5 px-8 text-lg font-semibold flex ${
         !props.icon && "w-[150px]"
@@ -16,7 +16,6 @@ const Button = (props) => {
         </div>
       )}
       {props.text}
-      {/* <div className="ml-2 w-6 h-6 border-9 border-primary rounded-full animate-spin bg-primary shadow"></div> */}
     </button>
   );
 };

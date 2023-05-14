@@ -10,13 +10,15 @@ const Toast = ({ content = "", isOpen, onClose = () => {} }) => {
   return (
     <div
       onClick={handleOnClose}
-      data-cy="modal-information"
       id="container"
+      data-cy="modal-information"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
       <div className="bg-white rounded-xl min-w-[500px] flex py-7 px-7 gap-3">
         <img src={AlertIcon} alt="alert-icon" />
-        <h2 className="text-lg font-semibold">{content}</h2>
+        <h2 data-cy="modal-information" className="text-lg font-semibold">
+          {content}
+        </h2>
       </div>
     </div>
   );

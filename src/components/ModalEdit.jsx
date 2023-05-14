@@ -51,12 +51,13 @@ const ModalAdd = ({
         </div>
         <div className="border-t border-gray-300 mt-4" />
         <footer className="flex justify-end px-9 py-5">
-          <Button
-            disabled={!todoData?.title || !todoData?.priority}
-            text="Simpan"
-            color="primary"
+          <button
             onClick={onConfirm}
-          />
+            disabled={!todoData?.title || !todoData?.priority}
+            className={`bg-primary text-white rounded-full py-3.5 px-8 text-lg font-semibold flex $w-[150px] text-center justify-center disabled:bg-[#D0EEFD]`}
+          >
+            Simpan
+          </button>
         </footer>
       </div>
     </div>

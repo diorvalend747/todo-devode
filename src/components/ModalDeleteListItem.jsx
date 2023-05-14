@@ -34,8 +34,19 @@ const ModalDeleteListItem = ({
             className="flex gap-6 mt-7"
             data-cy="modal-delete-confirm-button"
           >
-            <Button onClick={onClose} text="Batal" color="greyBg" />
-            <Button onClick={onConfirm} text="Hapus" color="labelVeryHigh" />
+            <button
+              onClick={onClose}
+              className={`bg-[#f4f4f4] text-[#4A4A4A] rounded-full py-3.5 px-8 text-lg font-semibold flex $w-[150px] text-center justify-center disabled:bg-[#D0EEFD]`}
+            >
+              Batal
+            </button>
+
+            <button
+              onClick={onConfirm}
+              className={`bg-[#ED4C5C] text-white rounded-full py-3.5 px-8 text-lg font-semibold flex $w-[150px] text-center justify-center disabled:bg-[#D0EEFD]`}
+            >
+              Hapus
+            </button>
           </div>
         </div>
       </div>

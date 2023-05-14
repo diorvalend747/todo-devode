@@ -162,18 +162,22 @@ const sortList = () => {
             setIsOpen={setShowSorting}
             setSortValue={setSortValue}
           />
-          <Button
-            color="primary"
+
+          <button
             onClick={() => setShowModalAdd(true)}
-            text="Tambah"
-            icon={PlusIcon}
-          />
+            className={`bg-primary text-white rounded-full py-3.5 px-8 text-lg font-semibold flex $w-[150px] text-center justify-center disabled:bg-[#D0EEFD]`}
+          >
+            <div className="mr-2 mt-0.5">
+              <img src={PlusIcon} alt="button-icon" />
+            </div>
+            Tambah
+          </button>
         </div>
       </div>
       {isLoading ? (
         <div>Loading...</div>
       ) : sortList.length > 0 ? (
-        <div data-cy="item-list">
+        <div data-cy="activity-item">
           {sortList.map((item, i) => {
             return (
               <CardItem

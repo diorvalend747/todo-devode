@@ -21,7 +21,7 @@ const ModalAdd = ({
     <div
       onClick={handleOnClose}
       id="container"
-      data-cy="modal-add"
+      data-cy="todo-add-button"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
       <div className="bg-white rounded-xl w-[830px]">
@@ -33,7 +33,9 @@ const ModalAdd = ({
         </div>
         <div className="border-b border-gray-300 " />
         <div className="flex flex-col px-9 py-5 mt-7">
-          <Input handleFormChange={handleFormChange} />
+          <div data-cy="modal-add-name-input">
+            <Input handleFormChange={handleFormChange} />
+          </div>
           <div className="mt-9">
             <p className="text-xs font-semibold">PRIORITY</p>
             <div className="relative w-64 mt-3">
@@ -42,13 +44,17 @@ const ModalAdd = ({
           </div>
         </div>
         <div className="border-t border-gray-300 mt-4" />
-        <footer className="flex justify-end px-9 py-5">
-          <Button
-            disabled={!todoData?.title || !todoData?.priority}
-            text="Simpan"
-            color="primary"
+        <footer
+          data-cy="modal-add-save-button"
+          className="flex justify-end px-9 py-5"
+        >
+          <button
             onClick={onConfirm}
-          />
+            disabled={!todoData?.title || !todoData?.priority}
+            className={`bg-primary text-white rounded-full py-3.5 px-8 text-lg font-semibold flex $w-[150px] text-center justify-center disabled:bg-[#D0EEFD]`}
+          >
+            Simpan
+          </button>
         </footer>
       </div>
     </div>
