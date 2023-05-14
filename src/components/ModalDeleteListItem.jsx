@@ -17,7 +17,7 @@ const ModalDeleteListItem = ({
     <div
       onClick={handleOnClose}
       id="container"
-      data-cy="modal-delete-list-item"
+      data-cy="todo-item-delete-button"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
       <div className="bg-white p-2 rounded-2xl px-9 py-9">
@@ -30,7 +30,10 @@ const ModalDeleteListItem = ({
               <span className="text-lg font-bold">"{content}"?</span>
             </h2>
           </div>
-          <div className="flex gap-6 mt-7">
+          <div
+            className="flex gap-6 mt-7"
+            data-cy="modal-delete-confirm-button"
+          >
             <Button onClick={onClose} text="Batal" color="greyBg" />
             <Button onClick={onConfirm} text="Hapus" color="labelVeryHigh" />
           </div>

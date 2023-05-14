@@ -21,7 +21,7 @@ const CardItem = (props) => {
       className="flex justify-between bg-white mb-[10px] p-[27px] rounded-xl shadow-lg"
       data-cy="item-card"
     >
-      <div className="flex items-center gap-7">
+      <div className="flex items-center gap-7" data-cy="todo-item-checkbox">
         <label className="flex items-center gap-7 cursor-pointer">
           <input
             checked={checked}

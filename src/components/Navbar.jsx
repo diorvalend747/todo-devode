@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <a
       href="/"
-      data-cy="navbar"
+      data-cy="header-title"
       className="h-[105px] bg-primary flex items-center text-white"
     >
       <div className="container max-w-[1000px]  mx-auto">

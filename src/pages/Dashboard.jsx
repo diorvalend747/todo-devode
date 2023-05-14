@@ -46,13 +46,17 @@ const Dashboard = () => {
   return (
     <section className="container max-w-[1000px] mx-auto">
       <div className="flex justify-between my-[3rem]">
-        <h1 className="font-bold text-4xl">Activity</h1>
-        <Button
-          text="Tambah"
-          icon={PlusIcon}
-          color="primary"
-          onClick={_createActivity}
-        />
+        <h1 className="font-bold text-4xl" data-cy="activity-title">
+          Activity
+        </h1>
+        <div data-cy="activity-add-button">
+          <Button
+            text="Tambah"
+            icon={PlusIcon}
+            color="primary"
+            onClick={_createActivity}
+          />
+        </div>
       </div>
       {isLoading ? (
         <div>Loading...</div>

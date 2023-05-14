@@ -24,7 +24,7 @@ const DropdownSort = ({
 
   return (
     <OutsideClickHandler onOutsideClick={() => setIsOpen(false)}>
-      <div id="sorting" className="relative" data-cy="dropdown-sorting">
+      <div id="sorting" className="relative" data-cy="todo-sort-button">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="border border-gray-300 bg-transparent h-[54px] w-[54px] rounded-full"
